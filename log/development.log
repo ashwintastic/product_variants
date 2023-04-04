@@ -1,0 +1,1419 @@
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE DATABASE `products_dev` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE DATABASE `products_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (30.1ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (29.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (11.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProducts (20230314085653)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProducts (20230314085653)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProducts (20230314085653)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProducts (20230314085653)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProducts (20230314085653)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProducts (20230314085653)
+  [1m[35m (31.2ms)[0m  [1m[35mCREATE TABLE `products` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230314085653')[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2023-03-14 09:15:30.967594', '2023-03-14 09:15:30.967594')[0m
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProductVarients (20230314092852)
+  [1m[35m (37.5ms)[0m  [1m[35mCREATE TABLE `product_varients` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `product_id` int, `variant_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230314092852')[0m
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateOptions (20230314103621)
+  [1m[35m (37.4ms)[0m  [1m[35mCREATE TABLE `options` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230314103621')[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProductOptions (20230314105509)
+  [1m[35m (31.0ms)[0m  [1m[35mCREATE TABLE `product_options` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `product_id` int, `option_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230314105509')[0m
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProductVariantOptions (20230314110020)
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE TABLE `product_variant_options` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `product_variant_id` int, `option_value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230314110020')[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (1.0ms)[0m  [1m[32mINSERT INTO `products` (`name`, `created_at`, `updated_at`) VALUES ('Pume T-shirt', '2023-03-14 11:03:53.928638', '2023-03-14 11:03:53.928638')[0m
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProductVarient Create (0.9ms)[0m  [1m[32mINSERT INTO `product_varients` (`product_id`, `variant_id`, `created_at`, `updated_at`) VALUES (1, NULL, '2023-03-14 11:05:27.885893', '2023-03-14 11:05:27.885893')[0m
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.9ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('Color', '2023-03-14 11:13:16.034800', '2023-03-14 11:13:16.034800')[0m
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.8ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('Size', '2023-03-14 11:13:58.096184', '2023-03-14 11:13:58.096184')[0m
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.7ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('Brand', '2023-03-14 11:14:17.179996', '2023-03-14 11:14:17.179996')[0m
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.7ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('Fabric', '2023-03-14 11:14:28.506051', '2023-03-14 11:14:28.506051')[0m
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.7ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('Type', '2023-03-14 11:14:39.679313', '2023-03-14 11:14:39.679313')[0m
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVarients (20230314113525)
+  [1m[35m (34.3ms)[0m  [1m[35mCREATE TABLE `varients` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230314113525')[0m
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProductVarientOptions (20230314113828)
+  [1m[35m (35.1ms)[0m  [1m[35mCREATE TABLE `product_varient_options` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `product_id` int, `variant_id` int, `option_id` int, `value` varchar(255), `price` float(24), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230314113828')[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVarient Create (0.9ms)[0m  [1m[32mINSERT INTO `varients` (`name`, `created_at`, `updated_at`) VALUES ('Size', '2023-03-14 11:41:00.755627', '2023-03-14 11:41:00.755627')[0m
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVarient Create (0.8ms)[0m  [1m[32mINSERT INTO `varients` (`name`, `created_at`, `updated_at`) VALUES ('Color', '2023-03-14 11:41:05.480280', '2023-03-14 11:41:05.480280')[0m
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVarient Create (0.7ms)[0m  [1m[32mINSERT INTO `varients` (`name`, `created_at`, `updated_at`) VALUES ('Brand', '2023-03-14 11:41:12.456419', '2023-03-14 11:41:12.456419')[0m
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVarient Create (0.9ms)[0m  [1m[32mINSERT INTO `varients` (`name`, `created_at`, `updated_at`) VALUES ('Fabric', '2023-03-14 11:41:17.984767', '2023-03-14 11:41:17.984767')[0m
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOption Load (1.0ms)[0m  [1m[34mSELECT `options`.* FROM `options`[0m
+  [1m[36mOption Delete All (7.4ms)[0m  [1m[31mDELETE FROM `options`[0m
+  [1m[36mOption Load (0.7ms)[0m  [1m[34mSELECT `options`.* FROM `options`[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.8ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('Small', '2023-03-14 11:44:47.897993', '2023-03-14 11:44:47.897993')[0m
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.8ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('red', '2023-03-14 11:44:52.420332', '2023-03-14 11:44:52.420332')[0m
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.7ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('greeb', '2023-03-14 11:44:57.967566', '2023-03-14 11:44:57.967566')[0m
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.7ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('green', '2023-03-14 11:45:01.350136', '2023-03-14 11:45:01.350136')[0m
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.7ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('cotton', '2023-03-14 11:45:06.014617', '2023-03-14 11:45:06.014617')[0m
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.7ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('pume', '2023-03-14 11:45:11.123019', '2023-03-14 11:45:11.123019')[0m
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.7ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('puma', '2023-03-14 11:45:13.643524', '2023-03-14 11:45:13.643524')[0m
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOption Create (0.7ms)[0m  [1m[32mINSERT INTO `options` (`name`, `created_at`, `updated_at`) VALUES ('adidas', '2023-03-14 11:45:18.260526', '2023-03-14 11:45:18.260526')[0m
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVarient Load (0.7ms)[0m  [1m[34mSELECT `varients`.* FROM `varients`[0m
+  [1m[36mOption Load (1.0ms)[0m  [1m[34mSELECT `options`.* FROM `options`[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProductVarientOption Create (1.0ms)[0m  [1m[32mINSERT INTO `product_varient_options` (`product_id`, `variant_id`, `option_id`, `value`, `price`, `created_at`, `updated_at`) VALUES (1, 1, 6, NULL, NULL, '2023-03-14 11:53:02.063970', '2023-03-14 11:53:02.063970')[0m
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProductVarientOption Create (0.8ms)[0m  [1m[32mINSERT INTO `product_varient_options` (`product_id`, `variant_id`, `option_id`, `value`, `price`, `created_at`, `updated_at`) VALUES (1, 2, 7, NULL, NULL, '2023-03-14 11:54:18.756850', '2023-03-14 11:54:18.756850')[0m
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProductVarient Load (1.0ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients`[0m
+  [1m[36mProductVarient Load (0.4ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients` ORDER BY `product_varients`.`id` ASC LIMIT 1[0m
+  [1m[36mProductVarient Load (0.8ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients` ORDER BY `product_varients`.`id` ASC LIMIT 1[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mVarient Load (0.7ms)[0m  [1m[34mSELECT `varients`.* FROM `varients`[0m
+  [1m[36mProductVarient Load (0.8ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients`[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProductVarient Create (0.8ms)[0m  [1m[32mINSERT INTO `product_varients` (`product_id`, `variant_id`, `created_at`, `updated_at`) VALUES (1, 1, '2023-03-14 12:02:18.048041', '2023-03-14 12:02:18.048041')[0m
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProductVarient Create (0.8ms)[0m  [1m[32mINSERT INTO `product_varients` (`product_id`, `variant_id`, `created_at`, `updated_at`) VALUES (1, 2, '2023-03-14 12:02:20.719344', '2023-03-14 12:02:20.719344')[0m
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProductVarient Create (0.7ms)[0m  [1m[32mINSERT INTO `product_varients` (`product_id`, `variant_id`, `created_at`, `updated_at`) VALUES (1, 3, '2023-03-14 12:02:22.605388', '2023-03-14 12:02:22.605388')[0m
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProductVarient Create (0.8ms)[0m  [1m[32mINSERT INTO `product_varients` (`product_id`, `variant_id`, `created_at`, `updated_at`) VALUES (1, 4, '2023-03-14 12:02:24.285884', '2023-03-14 12:02:24.285884')[0m
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProductVarient Load (0.5ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `products_dev` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `products_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[36mProduct Load (15.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mProductVarient Load (4.4ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients`[0m
+  [1m[36mVarient Load (5.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients`[0m
+  [1m[36mProductVarient Load (0.8ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients`[0m
+  [1m[36mProductVarient Load (0.9ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients` WHERE `product_varients`.`id` = 1 LIMIT 1[0m
+  [1m[36mProductVarient Destroy (5.8ms)[0m  [1m[31mDELETE FROM `product_varients` WHERE `product_varients`.`id` = 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mVarient Load (0.9ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` ORDER BY `varients`.`id` ASC LIMIT 1[0m
+  [1m[36mProductVarient Load (1.1ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients` ORDER BY `product_varients`.`id` ASC LIMIT 1[0m
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mVarient Load (1.1ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` INNER JOIN `product_varients` ON `varients`.`id` = `product_varients`.`varient_id` WHERE `product_varients`.`product_id` = 1[0m
+  [1m[36mVarient Count (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `varients` INNER JOIN `product_varients` ON `varients`.`id` = `product_varients`.`varient_id` WHERE `product_varients`.`product_id` = 1[0m
+  [1m[36mVarient Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `varients` INNER JOIN `product_varients` ON `varients`.`id` = `product_varients`.`varient_id` WHERE `product_varients`.`product_id` = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePrices (20230315094956)
+  [1m[35m (37.8ms)[0m  [1m[35mCREATE TABLE `prices` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `product_id` int, `price` float(24), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230315094956')[0m
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPrice Create (1.2ms)[0m  [1m[32mINSERT INTO `prices` (`product_id`, `price`, `created_at`, `updated_at`) VALUES (1, 105.75, '2023-03-15 09:51:03.440772', '2023-03-15 09:51:03.440772')[0m
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPrice Create (0.9ms)[0m  [1m[32mINSERT INTO `prices` (`product_id`, `price`, `created_at`, `updated_at`) VALUES (2, 1105.5, '2023-03-15 09:51:20.863814', '2023-03-15 09:51:20.863814')[0m
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mPrice Load (1.2ms)[0m  [1m[34mSELECT `prices`.* FROM `prices` WHERE `prices`.`product_id` = 1 LIMIT 1[0m
+  [1m[36mVarient Load (1.2ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` INNER JOIN `product_varients` ON `varients`.`id` = `product_varients`.`varient_id` WHERE `product_varients`.`product_id` = 1[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mVarient Load (1.2ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` INNER JOIN `product_varients` ON `varients`.`id` = `product_varients`.`varient_id` WHERE `product_varients`.`product_id` = 1[0m
+  [1m[36mProductVarientOption Load (1.4ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options` WHERE `product_varient_options`.`varient_id` = 1[0m
+  [1m[36mProductVarientOption Load (0.9ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options` WHERE `product_varient_options`.`varient_id` = 1 /* loading for inspect */ LIMIT 11[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mVarient Load (0.9ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` INNER JOIN `product_varients` ON `varients`.`id` = `product_varients`.`varient_id` WHERE `product_varients`.`product_id` = 1[0m
+  [1m[36mProductVarientOption Load (1.6ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options` WHERE `product_varient_options`.`varient_id` = 1[0m
+  [1m[36mProductVarientOption Load (1.0ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options` WHERE `product_varient_options`.`varient_id` = 1 /* loading for inspect */ LIMIT 11[0m
+  [1m[36mProductVarientOption Load (0.8ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options` WHERE `product_varient_options`.`varient_id` = 1[0m
+  [1m[36mProductVarientOption Load (0.7ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options` WHERE `product_varient_options`.`varient_id` = 1 /* loading for inspect */ LIMIT 11[0m
+  [1m[36mProductVarientOption Load (2.7ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options` ORDER BY `product_varient_options`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProductVarientOptions (20230314113828)
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE `product_varient_options` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `product_varient_id` int, `option_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7364123516160857775', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProductVarientOptions (20230314113828)
+  [1m[35m (34.5ms)[0m  [1m[35mCREATE TABLE `product_varient_options` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `product_varient_id` int, `option_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230314113828')[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7364123516160857775')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mVarient Load (0.9ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` ORDER BY `varients`.`id` ASC LIMIT 1[0m
+  [1m[36mProductVarientOption Load (0.9ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options` WHERE `product_varient_options`.`product_varient_id` = 1[0m
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mVarient Load (1.5ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` INNER JOIN `product_varients` ON `varients`.`id` = `product_varients`.`varient_id` WHERE `product_varients`.`product_id` = 1[0m
+  [1m[36mProductVarientOption Load (1.1ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options` WHERE `product_varient_options`.`product_varient_id` = 1[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  [1m[36mVarient Load (0.5ms)[0m  [1m[34mSELECT `varients`.* FROM `varients`[0m
+  [1m[36mProductVarient Load (0.4ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients`[0m
+  [1m[36mProductVarientOption Load (0.5ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options`[0m
+  [1m[36mOption Load (2.0ms)[0m  [1m[34mSELECT `options`.* FROM `options`[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProductVarient Load (0.4ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients` WHERE `product_varients`.`id` = 3 LIMIT 1[0m
+  [1m[36mProductVarientOption Create (0.4ms)[0m  [1m[32mINSERT INTO `product_varient_options` (`product_varient_id`, `option_id`, `created_at`, `updated_at`) VALUES (3, 6, '2023-03-16 07:53:52.046187', '2023-03-16 07:53:52.046187')[0m
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProductVarient Load (0.4ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients` WHERE `product_varients`.`id` = 3 LIMIT 1[0m
+  [1m[36mProductVarientOption Create (0.4ms)[0m  [1m[32mINSERT INTO `product_varient_options` (`product_varient_id`, `option_id`, `created_at`, `updated_at`) VALUES (3, 7, '2023-03-16 07:56:12.165997', '2023-03-16 07:56:12.165997')[0m
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProductVarientOption Load (0.4ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options`[0m
+  [1m[36mVarient Load (0.5ms)[0m  [1m[34mSELECT `varients`.* FROM `varients`[0m
+  [1m[36mProductVarient Load (0.6ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients`[0m
+  [1m[36mProductVarientOption Load (0.4ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options`[0m
+  [1m[36mProductVarientOption Load (0.5ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options` WHERE `product_varient_options`.`id` = 2 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProductVarient Load (0.4ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients` WHERE `product_varients`.`id` = 2 LIMIT 1[0m
+  [1m[36mProductVarientOption Update (0.4ms)[0m  [1m[33mUPDATE `product_varient_options` SET `product_varient_options`.`product_varient_id` = 2, `product_varient_options`.`updated_at` = '2023-03-16 08:12:57.064598' WHERE `product_varient_options`.`id` = 2[0m
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProductVarientOption Load (0.5ms)[0m  [1m[34mSELECT `product_varient_options`.* FROM `product_varient_options`[0m
+  [1m[36mOption Load (0.5ms)[0m  [1m[34mSELECT `options`.* FROM `options`[0m
+  [1m[36mProductVarient Load (1.3ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients` WHERE `product_varients`.`product_id` = 1[0m
+  [1m[36mVarient Load (0.9ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[36mProductVarient Load (0.8ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients` WHERE `product_varients`.`product_id` = 1[0m
+  [1m[36mVarient Load (1.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 3 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mVarient Load (0.8ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 3 LIMIT 1[0m
+  [1m[36mProductVarient Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 3 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mVarient Load (1.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 4 LIMIT 1[0m
+  [1m[36mProductVarient Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 4 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mVarient Load (0.8ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 5 LIMIT 1[0m
+  [1m[36mProductVarient Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 5 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mVarient Load (0.8ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 5 LIMIT 1[0m
+  [1m[36mProductVarient Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 5 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mVarient Load (0.8ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 5 LIMIT 1[0m
+  [1m[36mVarient Load (0.8ms)[0m  [1m[34mSELECT `varients`.* FROM `varients`[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVarient Create (0.9ms)[0m  [1m[32mINSERT INTO `varients` (`name`, `created_at`, `updated_at`) VALUES ('sleeves', '2023-03-18 05:46:20.550952', '2023-03-18 05:46:20.550952')[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mVarient Load (0.9ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 5 LIMIT 1[0m
+  [1m[36mProductVarient Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 5 LIMIT 1[0m
+  [1m[36mProductVarient Create (0.8ms)[0m  [1m[32mINSERT INTO `product_varients` (`product_id`, `varient_id`, `created_at`, `updated_at`) VALUES (1, 5, '2023-03-18 05:46:24.548148', '2023-03-18 05:46:24.548148')[0m
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mVarient Load (1.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 5 LIMIT 1[0m
+  [1m[36mProductVarient Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 5 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/" for ::1 at 2023-03-18 11:25:21 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.2ms | Allocations: 932)
+Completed 200 OK in 25ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 7828)
+
+
+Started POST "/products" for ::1 at 2023-03-21 15:52:23 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (11.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/products"):
+  
+Started POST "/product" for ::1 at 2023-03-21 15:52:57 +0530
+  
+ActionController::RoutingError (uninitialized constant ProductsController
+Did you mean?  ProductController):
+  
+Started POST "/product" for ::1 at 2023-03-21 15:58:33 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+NoMethodError (undefined method `before_filter' for ProductController:Class
+Did you mean?  before_action):
+  
+app/controllers/product_controller.rb:3:in `<class:ProductController>'
+app/controllers/product_controller.rb:1:in `<main>'
+Started POST "/product" for ::1 at 2023-03-21 15:59:53 +0530
+Processing by ProductController#create as */*
+  Parameters: {"name"=>"Mobile", "product"=>{"name"=>"Mobile"}}
+Started GET "/" for 192.168.1.47 at 2023-03-21 17:09:19 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.3ms | Allocations: 826)
+Completed 200 OK in 24ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 6556)
+
+
+Started GET "/product" for 192.168.1.47 at 2023-03-21 17:11:23 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductController#index as HTML
+Completed 400 Bad Request in 20927ms (ActiveRecord: 0.0ms | Allocations: 114170)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product):
+  
+app/controllers/product_controller.rb:17:in `product_parameter'
+Started GET "/favicon.ico" for 192.168.1.47 at 2023-03-21 17:11:48 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/product" for 192.168.1.47 at 2023-03-21 17:12:25 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductController#index as HTML
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 246)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product):
+  
+app/controllers/product_controller.rb:16:in `product_parameter'
+Started GET "/product" for 192.168.1.47 at 2023-03-21 17:14:37 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductController#index as HTML
+Completed 400 Bad Request in 35253ms (ActiveRecord: 0.0ms | Allocations: 134924)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product):
+  
+app/controllers/product_controller.rb:17:in `product_parameter'
+Started GET "/product" for 192.168.1.47 at 2023-03-21 17:15:41 +0530
+Processing by ProductController#index as HTML
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 372)
+
+
+Started GET "/product" for 192.168.1.47 at 2023-03-21 17:17:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductController#index as HTML
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 19412)
+
+
+Started GET "/product" for 192.168.1.47 at 2023-03-21 17:21:57 +0530
+Processing by ProductController#index as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started GET "/product" for 192.168.1.47 at 2023-03-21 17:22:00 +0530
+Processing by ProductController#index as HTML
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/" for 192.168.1.47 at 2023-03-23 17:21:41 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (9.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.9ms | Allocations: 826)
+Completed 200 OK in 21ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 6556)
+
+
+Started GET "/products" for 192.168.1.47 at 2023-03-23 17:21:49 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+Started GET "/favicon.ico" for 192.168.1.47 at 2023-03-23 17:21:50 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/product" for 192.168.1.47 at 2023-03-23 17:21:52 +0530
+Processing by ProductController#index as HTML
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 346)
+
+
+Started GET "/products" for 192.168.1.47 at 2023-03-23 17:22:10 +0530
+Processing by ProductController#index as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 254)
+
+
+Started POST "/product" for 192.168.1.47 at 2023-03-23 17:25:17 +0530
+Processing by ProductController#create as */*
+  Parameters: {"name"=>"Mobile", "product"=>{"name"=>"Mobile"}}
+Started POST "/product" for 192.168.1.47 at 2023-03-23 17:26:57 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductController#create as */*
+  Parameters: {"name"=>"Mobile", "product"=>{"name"=>"Mobile"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/product_controller.rb:12:in `create'
+  [1m[36mProduct Create (5.2ms)[0m  [1m[32mINSERT INTO `products` (`name`, `created_at`, `updated_at`) VALUES ('Mobile', '2023-03-23 11:56:57.365641', '2023-03-23 11:56:57.365641')[0m
+  ↳ app/controllers/product_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/product_controller.rb:12:in `create'
+Started POST "/product" for 192.168.1.47 at 2023-03-23 17:27:32 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductController#create as */*
+  Parameters: {"name"=>"Tv", "product"=>{"name"=>"Tv"}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/product_controller.rb:12:in `create'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO `products` (`name`, `created_at`, `updated_at`) VALUES ('Tv', '2023-03-23 11:57:32.261785', '2023-03-23 11:57:32.261785')[0m
+  ↳ app/controllers/product_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/product_controller.rb:12:in `create'
+Completed 204 No Content in 313202ms (ActiveRecord: 10.4ms | Allocations: 162435)
+
+
+Started POST "/product" for 192.168.1.47 at 2023-03-23 17:33:22 +0530
+Processing by ProductController#create as */*
+  Parameters: {"name"=>"Chair", "product"=>{"name"=>"Chair"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/product_controller.rb:13:in `create'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO `products` (`name`, `created_at`, `updated_at`) VALUES ('Chair', '2023-03-23 12:03:22.426056', '2023-03-23 12:03:22.426056')[0m
+  ↳ app/controllers/product_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/product_controller.rb:13:in `create'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 9.8ms | Allocations: 3476)
+
+
+Started GET "/products" for 192.168.1.47 at 2023-03-23 17:37:23 +0530
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/product_controller.rb:8:in `reduce'
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 6.7ms | Allocations: 7234)
+
+
+Started GET "/products" for 192.168.1.47 at 2023-03-23 17:37:47 +0530
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/product_controller.rb:8:in `reduce'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 5.2ms | Allocations: 7292)
+
+
+Started GET "/varient" for 192.168.1.47 at 2023-03-23 17:49:05 +0530
+  
+ActionController::RoutingError (uninitialized constant VarientsController
+Did you mean?  VarientController):
+  
+Started GET "/varient" for 192.168.1.47 at 2023-03-23 17:49:32 +0530
+  
+ArgumentError ('VarientsControllers' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/varient" for 192.168.1.47 at 2023-03-23 17:49:48 +0530
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for VarientsController):
+  
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/varient" for 192.168.1.47 at 2023-03-23 17:50:01 +0530
+Processing by VarientsController#show as HTML
+  [1m[36mVarient Load (5.5ms)[0m  [1m[34mSELECT `varients`.* FROM `varients`[0m
+  ↳ app/controllers/varients_controller.rb:5:in `show'
+Completed 200 OK in 25ms (Views: 20.2ms | ActiveRecord: 10.6ms | Allocations: 3569)
+
+
+Started GET "/" for ::1 at 2023-03-24 17:27:51 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (10.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.1ms | Allocations: 826)
+Completed 200 OK in 24ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 6556)
+
+
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: cad8-180-94-34-109.in.ngrok.io
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: cad8-180-94-34-109.in.ngrok.io
+Started GET "/" for 180.94.34.109 at 2023-03-24 17:42:19 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.2ms | Allocations: 826)
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 6556)
+
+
+Started GET "/products" for 180.94.34.109 at 2023-03-24 17:42:26 +0530
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (3.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/product_controller.rb:8:in `reduce'
+Completed 200 OK in 49ms (Views: 0.4ms | ActiveRecord: 10.6ms | Allocations: 22388)
+
+
+Started GET "/favicon.ico" for 180.94.34.109 at 2023-03-24 17:42:27 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/products" for 180.94.34.109 at 2023-03-24 17:44:42 +0530
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/product_controller.rb:8:in `reduce'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 790)
+
+
+Started GET "/products" for 180.94.34.109 at 2023-03-24 17:44:45 +0530
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/product_controller.rb:8:in `reduce'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 652)
+
+
+Started GET "/products" for 180.94.34.109 at 2023-03-24 17:46:47 +0530
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/product_controller.rb:8:in `reduce'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 661)
+
+
+Started GET "/products" for 180.94.34.109 at 2023-03-24 17:47:57 +0530
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/product_controller.rb:8:in `reduce'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 652)
+
+
+Started GET "/" for ::1 at 2023-03-27 15:04:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (9.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.8ms | Allocations: 827)
+Completed 200 OK in 20ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 6557)
+
+
+Started GET "/products" for ::1 at 2023-03-27 15:04:20 +0530
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (4.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/product_controller.rb:8:in `reduce'
+Completed 200 OK in 70ms (Views: 0.5ms | ActiveRecord: 14.8ms | Allocations: 22355)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-03-27 15:04:21 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/products" for ::1 at 2023-03-27 15:05:44 +0530
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/product_controller.rb:8:in `reduce'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 790)
+
+
+Started POST "/product" for ::1 at 2023-03-27 15:06:09 +0530
+Processing by ProductController#create as */*
+  Parameters: {"name"=>"Shoes", "product"=>{"name"=>"Shoes"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/product_controller.rb:18:in `create'
+  [1m[36mProduct Create (0.8ms)[0m  [1m[32mINSERT INTO `products` (`name`, `created_at`, `updated_at`) VALUES ('Shoes', '2023-03-27 09:36:09.454144', '2023-03-27 09:36:09.454144')[0m
+  ↳ app/controllers/product_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/product_controller.rb:18:in `create'
+Completed 200 OK in 22ms (Views: 0.7ms | ActiveRecord: 6.2ms | Allocations: 2689)
+
+
+Started GET "/products" for ::1 at 2023-03-27 15:06:14 +0530
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/product_controller.rb:8:in `reduce'
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.8ms | Allocations: 683)
+
+
+Started GET "/varients" for ::1 at 2023-03-27 15:06:57 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/varients"):
+  
+Started GET "/varient" for ::1 at 2023-03-27 15:07:00 +0530
+Processing by VarientsController#show as HTML
+  [1m[36mVarient Load (3.3ms)[0m  [1m[34mSELECT `varients`.* FROM `varients`[0m
+  ↳ app/controllers/varients_controller.rb:5:in `show'
+Completed 200 OK in 22ms (Views: 8.6ms | ActiveRecord: 9.6ms | Allocations: 3108)
+
+
+Started POST "/create_product_varient" for ::1 at 2023-03-27 15:28:02 +0530
+  
+Zeitwerk::NameError (expected file /home/user/projects/products/app/controllers/products_varients_controller.rb to define constant ProductsVarientsController, but didn't):
+  
+zeitwerk (2.6.7) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.7) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4.3) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.4.3) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.4.3) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/create_product_varient" for ::1 at 2023-03-27 15:28:55 +0530
+  
+Zeitwerk::NameError (expected file /home/user/projects/products/app/controllers/products_varients_controller.rb to define constant ProductsVarientsController, but didn't):
+  
+zeitwerk (2.6.7) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.7) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4.3) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.4.3) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.4.3) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.4.3) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/create_product_varient" for ::1 at 2023-03-27 15:29:25 +0530
+  
+AbstractController::ActionNotFound (The action 'create_product_varient' could not be found for ProductsVarientsController):
+  
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/create_product_varient" for ::1 at 2023-03-27 15:29:44 +0530
+Processing by ProductsVarientsController#create_product_varient as */*
+  Parameters: {"name"=>"Shoes", "products_varient"=>{"name"=>"Shoes"}}
+Completed 400 Bad Request in 31335187ms (Allocations: 984756)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product):
+  
+app/controllers/products_varients_controller.rb:14:in `product_varient_parameter'
+app/controllers/products_varients_controller.rb:5:in `create_product_varient'
+Started GET "/varient" for ::1 at 2023-03-30 12:29:46 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/varient"):
+  
+Started GET "/varient" for ::1 at 2023-03-30 12:32:57 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/varient"):
+  
+Started GET "/api/v1/varient" for ::1 at 2023-03-30 12:33:30 +0530
+  
+Zeitwerk::NameError (expected file /home/user/projects/products/app/controllers/api/v1/application_controller.rb to define constant Api::V1::ApplicationController, but didn't):
+  
+app/controllers/api/v1/varients_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/varients_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/varients_controller.rb:1:in `<main>'
+Started GET "/api/v1/varient" for ::1 at 2023-03-30 12:34:23 +0530
+Processing by Api::V1::VarientsController#show as HTML
+  [1m[36mVarient Load (0.5ms)[0m  [1m[34mSELECT `varients`.* FROM `varients`[0m
+  ↳ app/controllers/api/v1/varients_controller.rb:7:in `show'
+Completed 200 OK in 27ms (Views: 16.7ms | ActiveRecord: 5.3ms | Allocations: 17674)
+
+
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-03-30 12:35:40 +0530
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"name"=>"Shoes", "products_varient"=>{"name"=>"Shoes"}}
+[31mUnpermitted parameter: :name. Context: { controller: Api::V1::ProductsVarientsController, action: create_product_varient, request: #<ActionDispatch::Request:0x00007fd300c83018>, params: {"name"=>"Shoes", "controller"=>"api/v1/products_varients", "action"=>"create_product_varient", "products_varient"=>{"name"=>"Shoes"}} }[0m
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-03-30 12:38:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"name"=>"Shoes", "products_varient"=>{"name"=>"Shoes"}}
+[31mUnpermitted parameter: :name. Context: { controller: Api::V1::ProductsVarientsController, action: create_product_varient, request: #<ActionDispatch::Request:0x00007f6b3894f318>, params: {"name"=>"Shoes", "controller"=>"api/v1/products_varients", "action"=>"create_product_varient", "products_varient"=>{"name"=>"Shoes"}} }[0m
+[31mUnpermitted parameter: :name. Context: { controller: Api::V1::ProductsVarientsController, action: create_product_varient, request: #<ActionDispatch::Request:0x00007f6b3894f318>, params: {"name"=>"Shoes", "controller"=>"api/v1/products_varients", "action"=>"create_product_varient", "products_varient"=>{"name"=>"Shoes"}} }[0m
+[31mUnpermitted parameter: :name. Context: { controller: Api::V1::ProductsVarientsController, action: create_product_varient, request: #<ActionDispatch::Request:0x00007f6b3894f318>, params: {"name"=>"Shoes", "controller"=>"api/v1/products_varients", "action"=>"create_product_varient", "products_varient"=>{"name"=>"Shoes"}} }[0m
+[31mUnpermitted parameter: :name. Context: { controller: Api::V1::ProductsVarientsController, action: create_product_varient, request: #<ActionDispatch::Request:0x00007f6b3894f318>, params: {"name"=>"Shoes", "controller"=>"api/v1/products_varients", "action"=>"create_product_varient", "products_varient"=>{"name"=>"Shoes"}} }[0m
+[31mUnpermitted parameter: :name. Context: { controller: Api::V1::ProductsVarientsController, action: create_product_varient, request: #<ActionDispatch::Request:0x00007f6b3894f318>, params: {"name"=>"Shoes", "controller"=>"api/v1/products_varients", "action"=>"create_product_varient", "products_varient"=>{"name"=>"Shoes"}} }[0m
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-03-30 12:42:17 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"name"=>"Shoes", "products_varient"=>{"name"=>"Shoes"}}
+[31mUnpermitted parameter: :name. Context: { controller: Api::V1::ProductsVarientsController, action: create_product_varient, request: #<ActionDispatch::Request:0x00007f91c8bca4b0>, params: {"name"=>"Shoes", "controller"=>"api/v1/products_varients", "action"=>"create_product_varient", "products_varient"=>{"name"=>"Shoes"}} }[0m
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-03-30 12:43:54 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"name"=>"Shoes", "products_varient"=>{"name"=>"Shoes"}}
+Completed 500 Internal Server Error in 29652ms (ActiveRecord: 0.0ms | Allocations: 146152)
+
+
+  
+NameError (undefined local variable or method `pv_parmas' for #<Api::V1::ProductsVarientsController:0x00000000008ef8>):
+  
+app/controllers/api/v1/products_varients_controller.rb:8:in `create_product_varient'
+Started GET "/api/v1/varient" for ::1 at 2023-04-03 17:11:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (10.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::VarientsController#show as HTML
+  [1m[36mVarient Load (2.4ms)[0m  [1m[34mSELECT `varients`.* FROM `varients`[0m
+  ↳ app/controllers/api/v1/varients_controller.rb:7:in `show'
+Completed 200 OK in 57ms (Views: 18.0ms | ActiveRecord: 9.2ms | Allocations: 36672)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-04-03 17:11:15 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/products" for ::1 at 2023-04-03 17:11:35 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+Started GET "/product" for ::1 at 2023-04-03 17:11:39 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/product"):
+  
+Started GET "/api/v1/product" for ::1 at 2023-04-03 17:11:52 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/product"):
+  
+Started GET "/api/v1/products" for ::1 at 2023-04-03 17:12:04 +0530
+Processing by Api::V1::ProductController#index as HTML
+  [1m[36mProduct Load (4.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/api/v1/product_controller.rb:10:in `reduce'
+Completed 200 OK in 36ms (Views: 0.4ms | ActiveRecord: 9.1ms | Allocations: 7983)
+
+
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-04-03 17:12:53 +0530
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"product_id"=>1, "varient_id"=>1, "products_varient"=>{"product_id"=>1, "varient_id"=>1}}
+Completed 204 No Content in 23924ms (ActiveRecord: 0.0ms | Allocations: 133787)
+
+
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mProductVarient Load (8.7ms)[0m  [1m[34mSELECT `product_varients`.* FROM `product_varients`[0m
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-04-03 17:20:25 +0530
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"product_id"=>1, "varient_id"=>1, "products_varient"=>{"product_id"=>1, "varient_id"=>1}}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/products_varients_controller.rb:9:in `create_product_varient'
+  [1m[36mVarient Load (0.7ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/products_varients_controller.rb:10:in `create_product_varient'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/products_varients_controller.rb:11:in `create_product_varient'
+  [1m[36mCACHE Varient Load (0.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/products_varients_controller.rb:11:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/products_varients_controller.rb:11:in `create_product_varient'
+  [1m[36mProductVarient Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/products_varients_controller.rb:11:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/products_varients_controller.rb:11:in `create_product_varient'
+Completed 200 OK in 71ms (Views: 0.4ms | ActiveRecord: 7.1ms | Allocations: 36110)
+
+
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-04-03 17:31:38 +0530
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"product_id"=>1, "varient_id"=>1, "products_varient"=>{"product_id"=>1, "varient_id"=>1}}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:13:in `create_product_varient'
+  [1m[36mVarient Load (0.7ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:14:in `create_product_varient'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mCACHE Varient Load (0.1ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mProductVarient Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+Completed 200 OK in 61ms (Views: 0.5ms | ActiveRecord: 3.0ms | Allocations: 19092)
+
+
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-04-03 17:32:06 +0530
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"product_id"=>1, "varient_id"=>1, "products_varient"=>{"product_id"=>1, "varient_id"=>1}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:13:in `create_product_varient'
+  [1m[36mVarient Load (0.5ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:14:in `create_product_varient'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mCACHE Varient Load (0.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mProductVarient Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 4387)
+
+
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-04-03 17:32:45 +0530
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"product_id"=>1, "varient_id"=>1, "products_varient"=>{"product_id"=>1, "varient_id"=>1}}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:13:in `create_product_varient'
+  [1m[36mVarient Load (0.4ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:14:in `create_product_varient'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mCACHE Varient Load (0.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mProductVarient Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+Completed 200 OK in 70ms (Views: 0.3ms | ActiveRecord: 15.3ms | Allocations: 22943)
+
+
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-04-03 17:33:09 +0530
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"product_id"=>1, "varient_id"=>1, "products_varient"=>{"product_id"=>1, "varient_id"=>1}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:13:in `create_product_varient'
+  [1m[36mVarient Load (0.5ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:14:in `create_product_varient'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mCACHE Varient Load (0.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mProductVarient Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+Completed 200 OK in 61ms (Views: 0.3ms | ActiveRecord: 14.3ms | Allocations: 19935)
+
+
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-04-03 17:34:40 +0530
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"product_id"=>1, "varient_id"=>1, "products_varient"=>{"product_id"=>1, "varient_id"=>1}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:13:in `create_product_varient'
+  [1m[36mVarient Load (0.4ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:14:in `create_product_varient'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mCACHE Varient Load (0.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mProductVarient Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+Completed 200 OK in 55ms (Views: 0.4ms | ActiveRecord: 13.6ms | Allocations: 19736)
+
+
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-04-03 17:34:56 +0530
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"product_id"=>1, "varient_id"=>1, "products_varient"=>{"product_id"=>1, "varient_id"=>1}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:13:in `create_product_varient'
+  [1m[36mVarient Load (0.4ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:14:in `create_product_varient'
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mCACHE Varient Load (0.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mProductVarient Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 4371)
+
+
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-04-03 17:35:08 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"product_id"=>1, "varient_id"=>1, "products_varient"=>{"product_id"=>1, "varient_id"=>1}}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:13:in `create_product_varient'
+  [1m[36mVarient Load (0.7ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:14:in `create_product_varient'
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mCACHE Varient Load (0.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mProductVarient Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+Completed 200 OK in 125ms (Views: 0.5ms | ActiveRecord: 13.1ms | Allocations: 71952)
+
+
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-04-03 17:35:45 +0530
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"product_id"=>1, "varient_id"=>1, "products_varient"=>{"product_id"=>1, "varient_id"=>1}}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:13:in `create_product_varient'
+  [1m[36mVarient Load (0.5ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:14:in `create_product_varient'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mCACHE Varient Load (0.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mProductVarient Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+Completed 200 OK in 74033ms (Views: 0.4ms | ActiveRecord: 23.3ms | Allocations: 175980)
+
+
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-04-03 17:37:04 +0530
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"product_id"=>1, "varient_id"=>1, "products_varient"=>{"product_id"=>1, "varient_id"=>1}}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:13:in `create_product_varient'
+  [1m[36mVarient Load (0.4ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:14:in `create_product_varient'
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mCACHE Varient Load (0.1ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mProductVarient Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+Completed 200 OK in 71ms (Views: 0.5ms | ActiveRecord: 13.8ms | Allocations: 20251)
+
+
+Started POST "/api/v1/create_product_varient" for ::1 at 2023-04-03 17:37:46 +0530
+Processing by Api::V1::ProductsVarientsController#create_product_varient as */*
+  Parameters: {"product_id"=>1, "varient_id"=>1, "products_varient"=>{"product_id"=>1, "varient_id"=>1}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:13:in `create_product_varient'
+  [1m[36mVarient Load (0.5ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:14:in `create_product_varient'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mCACHE Varient Load (0.0ms)[0m  [1m[34mSELECT `varients`.* FROM `varients` WHERE `varients`.`id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mProductVarient Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `product_varients` WHERE `product_varients`.`product_id` = 1 AND `product_varients`.`varient_id` = 1 LIMIT 1[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/product_varient.rb:15:in `create_product_varient'
+Completed 200 OK in 57ms (Views: 0.3ms | ActiveRecord: 13.3ms | Allocations: 20159)
+
+
+Started GET "/api/v1/product_and_varients" for ::1 at 2023-04-03 17:55:05 +0530
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 213)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/v1/product_controller.rb:22:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 17:56:21 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/product_and_varients/1"):
+  
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 17:56:47 +0530
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+Completed 400 Bad Request in 8ms (Allocations: 4658)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product
+Did you mean?  product_id):
+  
+app/controllers/api/v1/product_controller.rb:41:in `product_parameter'
+app/controllers/api/v1/product_controller.rb:23:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 17:57:16 +0530
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+Completed 400 Bad Request in 64543ms (Allocations: 121455)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product
+Did you mean?  product_id):
+  
+app/controllers/api/v1/product_controller.rb:42:in `product_parameter'
+app/controllers/api/v1/product_controller.rb:23:in `fetch_product_and_its_varients'
+Started GET "/api/v1/products" for ::1 at 2023-04-03 17:58:26 +0530
+Processing by Api::V1::ProductController#index as HTML
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/api/v1/product_controller.rb:10:in `reduce'
+Completed 200 OK in 29ms (Views: 0.6ms | ActiveRecord: 2.3ms | Allocations: 7801)
+
+
+Started GET "/api/v1/products" for ::1 at 2023-04-03 17:58:31 +0530
+Processing by Api::V1::ProductController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/api/v1/product_controller.rb:10:in `reduce'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 689)
+
+
+Started GET "/api/v1/products" for ::1 at 2023-04-03 17:58:37 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/controllers/api/v1/product_controller.rb:10:in `reduce'
+Completed 200 OK in 44ms (Views: 0.4ms | ActiveRecord: 5.2ms | Allocations: 41406)
+
+
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:02:27 +0530
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms | Allocations: 8090)
+
+
+  
+NoMethodError (undefined method `get_product_and_its_varients' for ProductVarient:Class):
+  
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:04:24 +0530
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+  [1m[36mProductVarient Load (1.0ms)[0m  [1m[34mselect * from product_varients inner join products p
+ on p.id = product_varients.product_id inner join 
+ varients v on v.id = product_varients.varient_id where p.id  = ?
+[0m
+  ↳ (rdbg)//home/user/projects/products/app/models/product_varient.rb:1:in `get_product_and_its_varients'
+  [1m[36mProductVarient Load (0.9ms)[0m  [1m[34mselect * from product_varients inner join products p
+ on p.id = product_varients.product_id inner join 
+ varients v on v.id = product_varients.varient_id where p.id  = ?
+[0m
+  ↳ (rdbg)//home/user/projects/products/app/models/product_varient.rb:1:in `get_product_and_its_varients'
+Completed 204 No Content in 903315ms (ActiveRecord: 4.8ms | Allocations: 188981)
+
+
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:19:37 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+  [1m[35m (1.1ms)[0m  [1m[34mselect * from product_varients inner join products p
+ on p.id = product_varients.product_id inner join 
+ varients v on v.id = product_varients.varient_id where p.id  = '1'
+[0m
+  ↳ app/models/product_varient.rb:26:in `execute_sql'
+  [1m[36mProductVarient Load (1.2ms)[0m  [1m[34mselect * from product_varients inner join products p
+ on p.id = product_varients.product_id inner join 
+ varients v on v.id = product_varients.varient_id where p.id  = ?
+[0m
+  ↳ (rdbg)//home/user/projects/products/app/models/product_varient.rb:1:in `get_product_and_its_varients'
+  [1m[36mProductVarient Load (0.9ms)[0m  [1m[34mselect * from product_varients inner join products p
+ on p.id = product_varients.product_id inner join 
+ varients v on v.id = product_varients.varient_id where p.id  = ?
+[0m
+  ↳ (rdbg)//home/user/projects/products/app/models/product_varient.rb:1:in `get_product_and_its_varients'
+  [1m[36mProductVarient Load (1.2ms)[0m  [1m[34mselect * from product_varients inner join products p
+ on p.id = product_varients.product_id inner join 
+ varients v on v.id = product_varients.varient_id where p.id  = '1'
+[0m
+  ↳ (rdbg)//home/user/projects/products/app/models/product_varient.rb:1:in `get_product_and_its_varients'
+Completed 204 No Content in 873152ms (ActiveRecord: 16.8ms | Allocations: 746110)
+
+
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:34:19 +0530
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+  [1m[35m (0.8ms)[0m  [1m[34mselect p.name, p.id, pvs.name, pvs.id from product_varients pvs inner join products p
+ on p.id = product_varients.product_id inner join 
+ varients v on v.id = product_varients.varient_id where p.id  = '1'
+[0m
+  ↳ app/models/product_varient.rb:26:in `execute_sql'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms | Allocations: 4966)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'pvs.name' in 'field list'):
+  
+app/models/product_varient.rb:26:in `execute_sql'
+app/models/product_varient.rb:35:in `get_product_and_its_varients'
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:34:58 +0530
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+  [1m[36mProductVarient Load (1.2ms)[0m  [1m[34mselect p.name, p.id, pvs.name, pvs.id from product_varients pvs inner join products p
+ on p.id = product_varients.product_id inner join 
+ varients v on v.id = product_varients.varient_id where p.id  = '1'
+[0m
+  ↳ (rdbg)//home/user/projects/products/app/models/product_varient.rb:1:in `get_product_and_its_varients'
+Completed 500 Internal Server Error in 65609ms (ActiveRecord: 1.2ms | Allocations: 113781)
+
+
+  
+NoMethodError (undefined method `execute_sql' for ProductVarient:Class
+Did you mean?  execute_scope?):
+  
+app/models/product_varient.rb:33:in `get_product_and_its_varients'
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:36:06 +0530
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+  [1m[36mProductVarient Load (0.6ms)[0m  [1m[34mselect p.name, p.id, pvs.product_id, pvs.varient_id, pvs.id, v.name from product_varients pvs inner join products p
+ on p.id = product_varients.product_id inner join 
+ varients v on v.id = product_varients.varient_id where p.id  = '1'
+[0m
+  ↳ (rdbg)//home/user/projects/products/app/models/product_varient.rb:1:in `get_product_and_its_varients'
+Completed 500 Internal Server Error in 91932ms (ActiveRecord: 10.0ms | Allocations: 127681)
+
+
+  
+NoMethodError (undefined method `execute_sql' for ProductVarient:Class
+Did you mean?  execute_scope?):
+  
+app/models/product_varient.rb:33:in `get_product_and_its_varients'
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:37:47 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+Completed 500 Internal Server Error in 99032ms (ActiveRecord: 4.9ms | Allocations: 156409)
+
+
+  
+NoMethodError (undefined method `execute_sql' for ProductVarient:Class
+Did you mean?  execute_scope?):
+  
+app/models/product_varient.rb:35:in `get_product_and_its_varients'
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:39:32 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+Completed 500 Internal Server Error in 128804ms (ActiveRecord: 4.3ms | Allocations: 172112)
+
+
+  
+NoMethodError (undefined method `execute_sql' for ProductVarient:Class
+Did you mean?  execute_scope?):
+  
+app/models/product_varient.rb:39:in `get_product_and_its_varients'
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:43:39 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+Completed 500 Internal Server Error in 42872ms (ActiveRecord: 4.6ms | Allocations: 155243)
+
+
+  
+NoMethodError (undefined method `execute_sql' for ProductVarient:Class
+Did you mean?  execute_scope?):
+  
+app/models/product_varient.rb:37:in `get_product_and_its_varients'
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:44:48 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+Completed 500 Internal Server Error in 28027ms (ActiveRecord: 3.5ms | Allocations: 151541)
+
+
+  
+NoMethodError (undefined method `execute_sql' for ProductVarient:Class
+Did you mean?  execute_scope?):
+  
+app/models/product_varient.rb:41:in `get_product_and_its_varients'
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:45:21 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+Completed 500 Internal Server Error in 38981ms (ActiveRecord: 1.8ms | Allocations: 151847)
+
+
+  
+NoMethodError (undefined method `execute_sql' for ProductVarient:Class
+Did you mean?  execute_scope?):
+  
+app/models/product_varient.rb:41:in `get_product_and_its_varients'
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:46:05 +0530
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+Completed 500 Internal Server Error in 373417ms (ActiveRecord: 6.7ms | Allocations: 150211)
+
+
+  
+NoMethodError (undefined method `execute_sql' for ProductVarient:Class
+Did you mean?  execute_scope?):
+  
+app/models/product_varient.rb:37:in `get_product_and_its_varients'
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:52:28 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+Completed 500 Internal Server Error in 23059ms (ActiveRecord: 1.7ms | Allocations: 151407)
+
+
+  
+NoMethodError (undefined method `execute_sql' for ProductVarient:Class
+Did you mean?  execute_scope?):
+  
+app/models/product_varient.rb:40:in `get_product_and_its_varients'
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 18:52:58 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+Completed 500 Internal Server Error in 1159758ms (ActiveRecord: 2.8ms | Allocations: 174268)
+
+
+  
+NoMethodError (undefined method `execute_sql' for ProductVarient:Class
+Did you mean?  execute_scope?):
+  
+app/models/product_varient.rb:40:in `get_product_and_its_varients'
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 19:12:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
+Completed 500 Internal Server Error in 15488ms (ActiveRecord: 4.4ms | Allocations: 160302)
+
+
+  
+NoMethodError (undefined method `execute_sql' for ProductVarient:Class
+Did you mean?  execute_scope?):
+  
+app/models/product_varient.rb:40:in `get_product_and_its_varients'
+app/controllers/api/v1/product_controller.rb:24:in `fetch_product_and_its_varients'
+Started GET "/api/v1/product_and_varients/1" for ::1 at 2023-04-03 19:13:02 +0530
+Processing by Api::V1::ProductController#fetch_product_and_its_varients as HTML
+  Parameters: {"product_id"=>"1"}
